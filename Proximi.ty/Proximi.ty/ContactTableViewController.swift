@@ -1,5 +1,5 @@
 //
-//  ProximityTableViewController.swift
+//  ContactTableViewController.swift
 //  Proximi.ty
 //
 //  Created by Eric Yu on 4/18/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProximityTableViewController: UITableViewController {
+class ContactTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
