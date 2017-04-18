@@ -14,6 +14,8 @@
 		07CCEC411EA6A24600C89AEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07CCEC3F1EA6A24600C89AEC /* LaunchScreen.storyboard */; };
 		07CCEC4C1EA6A24700C89AEC /* Proximi_tyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CCEC4B1EA6A24700C89AEC /* Proximi_tyTests.swift */; };
 		07CCEC571EA6A24700C89AEC /* Proximi_tyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CCEC561EA6A24700C89AEC /* Proximi_tyUITests.swift */; };
+		07CCEC651EA6A4D700C89AEC /* ProximityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CCEC641EA6A4D700C89AEC /* ProximityTableViewController.swift */; };
+		07CCEC671EA6A7D400C89AEC /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CCEC661EA6A7D400C89AEC /* ContactTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		07CCEC521EA6A24700C89AEC /* Proximi.tyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Proximi.tyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07CCEC561EA6A24700C89AEC /* Proximi_tyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proximi_tyUITests.swift; sourceTree = "<group>"; };
 		07CCEC581EA6A24700C89AEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07CCEC641EA6A4D700C89AEC /* ProximityTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProximityTableViewController.swift; sourceTree = "<group>"; };
+		07CCEC661EA6A7D400C89AEC /* ContactTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +102,10 @@
 			isa = PBXGroup;
 			children = (
 				07CCEC361EA6A24600C89AEC /* AppDelegate.swift */,
+				07CCEC641EA6A4D700C89AEC /* ProximityTableViewController.swift */,
 				07CCEC381EA6A24600C89AEC /* ViewController.swift */,
 				07CCEC3A1EA6A24600C89AEC /* Main.storyboard */,
+				07CCEC661EA6A7D400C89AEC /* ContactTableViewCell.swift */,
 				07CCEC3D1EA6A24600C89AEC /* Assets.xcassets */,
 				07CCEC3F1EA6A24600C89AEC /* LaunchScreen.storyboard */,
 				07CCEC421EA6A24600C89AEC /* Info.plist */,
@@ -259,8 +265,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07CCEC671EA6A7D400C89AEC /* ContactTableViewCell.swift in Sources */,
 				07CCEC391EA6A24600C89AEC /* ViewController.swift in Sources */,
 				07CCEC371EA6A24600C89AEC /* AppDelegate.swift in Sources */,
+				07CCEC651EA6A4D700C89AEC /* ProximityTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
