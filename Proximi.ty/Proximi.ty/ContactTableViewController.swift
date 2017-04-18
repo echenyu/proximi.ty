@@ -10,15 +10,21 @@ import UIKit
 
 class ContactTableViewController: UITableViewController {
 
+    var contacts = [Contact]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        loadSampleContacts()
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -28,24 +34,41 @@ class ContactTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        //Might need to change this to accomodate for different contact frequency
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return contacts.count
     }
 
-    /*
+   
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        
+        let cellIdentifier = "ContactTableViewCell"
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? ContactTableViewCell else {
+            fatalError("The dequeued cell is not an instance of a ContactTableViewCell")
+        }
+        
+        let contact = contacts[indexPath.row]
 
-        // Configure the cell...
+        cell.nameLabel.text = contact.name
+        cell.dateLabel.text = contact.dateOfLastContact
+        
+        if(indexPath.row % 2 == 0) {
+            print("Got in 1")
+            cell.backgroundColor = UIColor (colorLiteralRed: 255.0/255.0, green: 199.0/255.0, blue: 44.0/255.0, alpha: 1)
+        } else {
+            cell.nameLabel.textColor = UIColor.white
+            cell.dateLabel.textColor = UIColor.white
+            cell.backgroundColor = UIColor (colorLiteralRed: 4.0/255.0, green: 30.0/255.0, blue: 66.0/255.0, alpha: 1)
+        }
+        
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -91,5 +114,21 @@ class ContactTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    private func loadSampleContacts() {
+        guard let contact1 = Contact(name: "Sandeep Siva", phoneNumber: "248-470-0812", dateOfLastContact: "None") else {
+            fatalError("Unable to instantiate contact1")
+        }
+        guard let contact2 = Contact(name: "Gary Huang", phoneNumber: "585-298-8250", dateOfLastContact: "None") else {
+            fatalError("Unable to instantiate contact2")
+        }
+        guard let contact3 = Contact(name: "AnneMarie Torresen", phoneNumber: "202-701-6765", dateOfLastContact: "None") else {
+            fatalError("Unable to instantiate contact3")
+        }
+        
+        
+        contacts += [contact1, contact2, contact3]
+        
+    }
 
 }
