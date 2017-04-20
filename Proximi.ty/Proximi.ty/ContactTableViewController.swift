@@ -58,7 +58,10 @@ class ContactTableViewController: UITableViewController {
         cell.dateLabel.text = contact.dateOfLastContact
         
         if(indexPath.row % 2 == 0) {
-            print("Got in 1")
+            print("Got in 1", indexPath.row)
+            cell.nameLabel.textColor = UIColor.black
+            cell.dateLabel.textColor = UIColor.black
+
             cell.backgroundColor = UIColor (colorLiteralRed: 255.0/255.0, green: 199.0/255.0, blue: 44.0/255.0, alpha: 1)
         } else {
             cell.nameLabel.textColor = UIColor.white
@@ -127,7 +130,7 @@ class ContactTableViewController: UITableViewController {
         }
         
         
-        contacts += [contact1, contact2, contact3]
+        contacts += [contact1, contact2, contact3, contact1, contact2, contact3, contact2, contact3, contact2, contact3, contact2, contact3]
         
     }
 
